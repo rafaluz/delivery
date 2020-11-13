@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %} todos os produtos {% endblock title %}
+{% block content %}
+
+    <a href="{% url 'criar_produtos' %}">Novo Produto</a>
+
+    <h1> Listar os produtos </h1>
+    {% for produto in object_list %}
+
+        <p>{{ produto.nome }}</p>
+        <p>{{ produto.valor }}</p>
+        <a href="{% url 'detalhar_produto' produto.pk %}"><input type="button" value="Detalhes" /></a>
+        <a href="{% url 'alterar_produto' produto.pk %}"><input type="button" value="Atualizar" /></a>
+        <a href="{% url 'deletar_produto' produto.id %}"><button>Deletar</button></a>
+        <hr>
+
+    {% endfor %}
+
+{% endblock content %}
+
+
+
+
+    

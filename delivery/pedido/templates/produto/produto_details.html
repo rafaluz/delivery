@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %} detalhes do produto {% endblock title %}
+
+
+
+{% block content %}
+
+    <h1>Detalhes do produto {{ object.id }}</h1>
+    <p>{{ object.nome }}</p>
+    <p>{{ object.valor }}</p>
+
+{% endblock content %}
+

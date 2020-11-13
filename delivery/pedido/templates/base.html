@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+    
+<nav>Aqui vem o navbar</nav>
+<div style="background-color: bisque;">
+
+    {% block content%}{% endblock %}
+
+</div>
+<footer>Aqui vem o footer</footer>
+
+
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+
+</body>
+</html>
